@@ -41,17 +41,20 @@ namespace Clean_Architecture___MODELO.Entities
 
                 entity.ToTable("Tab_Usuario");
 
-                entity.Property(e => e.Cpf)
+                entity.Property(rr => rr.Cpf)
                     .HasMaxLength(11)
                     .HasColumnName("CPF");
 
-                entity.Property(e => e.Email)
+                entity.Property(rr => rr.Email)
                     .HasMaxLength(50)
                     .HasColumnName("email");
 
-                entity.Property(e => e.Telefone).HasMaxLength(9);
+                entity.Property(rr => rr.Idade)
+                    .HasMaxLength(50)
+                    .HasColumnName("Idade");
+                entity.Property(rr => rr.Telefone).HasMaxLength(9);
 
-                entity.Property(e => e.Usuario).HasMaxLength(50);
+                entity.Property(rr => rr.Usuario).HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);
